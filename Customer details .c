@@ -1,11 +1,12 @@
 #include<stdio.h>
 #include<string.h>
+#include<fstream.h>
 #include<stdlib.h>
 struct Customer_details
 {
 char name[30];
- char gender;
- char _grp[4];
+char gender;
+char _grp[4];
 char city[10];
 char address[100];
 int id;
@@ -18,7 +19,7 @@ void insert()
 	FILE *fp1;	
 	fp1=fopen("details.dat","a");
 	if(fp1==NULL)
-	{	printf("Sorry, Techincal fault, Try later!\n");
+	{	printf("Error! Techincal fault, Try again.\n");
 			return;	
 	}
 printf("Enter your Name\n");
